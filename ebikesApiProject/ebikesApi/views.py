@@ -1,9 +1,11 @@
 from django.shortcuts import render
-
-# Create your views here.
+from django.http import JsonResponse
 from rest_framework import generics
 from .models import Post
 from .serializers import PostSerializer
+
+def root_view(request):
+    return JsonResponse({"status": "OK"})
 
 class PostListCreate(generics.ListCreateAPIView):
     queryset = Post.objects.all()
