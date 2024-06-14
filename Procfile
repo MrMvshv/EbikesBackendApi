@@ -1,1 +1,1 @@
-web: gunicorn ebikesApiProject.wsgi --log-file -
+web: gunicorn ebikesApiProject.wsgi:application --log-file -
