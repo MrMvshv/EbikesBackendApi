@@ -11,8 +11,8 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Run migrations and collect static files
-RUN python manage.py migrate
-RUN python manage.py collectstatic --noinput
+RUN python ebikesApiProject/manage.py migrate
+RUN python ebikesApiProject/manage.py collectstatic --noinput
 
 # Expose the port the app runs on
 EXPOSE 8000
